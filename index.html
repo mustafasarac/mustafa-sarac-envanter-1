@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="css/flat-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+       <div id="table"></div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="top: 25%;" role="document">
+          <div class="modal-content">
+              <div class="modal-header" style="display: block;">
+                  <h7>
+                      DETAY
+                      <button type="button" style="float: right;" class="close" style="color: #b6b6b6 !important;" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </h7>
+              </div>
+              <div class="modal-body">
+                  <div id="infos"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/flat-ui.js"></script>
+	<script src="scripts/linq.min.js"></script>
+	<script src="scripts/tableCreator.js"></script>
+
+  <script type="text/javascript">
+  var tableData = [
+    {name: "Gökhan Türkmen", tc: "11111111111", phone: "0525545852", birthPlace: "Eskişehir"},
+    {name: "Ayşen Küçük", tc: "11111111112", phone: "0525545852", birthPlace: "Eskişehir"},
+    {name: "Görkem Yıldırım", tc: "11111111113", phone: "0525545852", birthPlace: "Eskişehir"},
+    {name: "Mustafa Saraç", tc: "11111111114", phone: "0525545852", birthPlace: "İzmir"},
+    {name: "Tuna Akıncı", tc: "11111111115", phone: "0525545852", birthPlace: "İstanbul"},
+    {name: "Musa Yaman", tc: "11111111116", phone: "0525545852", birthPlace: "Ankara"},
+    {name: "Oğuz Yılmaz", tc: "11111111117", phone: "0525556564", birthPlace: "İstanbul"}
+  ]
+  $('#table').tableCreator({
+    data: tableData,
+    columns: Object.keys(tableData[0]),
+  })
+  </script>
+</body>
+</html>
